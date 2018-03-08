@@ -3,6 +3,44 @@
   margin-left: 18px;
 padding: 6px 8px 6px 16px;
 }
+p {
+    text-align: center;
+    color: green;
+}
+html
+{
+    overflow: scroll;
+}
+table {
+
+    border-collapse: separate;
+    border-spacing: 0 1em;
+
+}
+
+td {
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+.btn-send{
+  position: absolute;
+    bottom: 10px;
+    text-align:right;
+    margin-top:20px;
+}
+form{
+  position: absolute;
+      bottom: 60px;
+      height: 70px;
+      width: 70%;
+
+
+}
+#user_input{
+    border:1px dotted #CFCFCF!important;
+    height:70px!important;
+}
+
 .sidenav {
     height: 100%;
     width: 150px;
@@ -34,7 +72,6 @@ padding: 6px 8px 6px 16px;
     padding: 0px 10px;
 }
 
-@media screen and (max-height: 450px) {
+/* @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-    
+    .sidenav a {font-size: 18px;} */

@@ -6,11 +6,29 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script language="JavaScript">
+    function showInput() {
 
+
+                    var tableRef = document.getElementById('myTable').getElementsByTagName('tbody')[0];
+
+// Insert a row in the table at the last row
+var newRow   = tableRef.insertRow(tableRef.rows.length);
+
+// Insert a cell in the row at index 0
+var newCell  = newRow.insertCell(0);
+
+// Append a text node to the cell
+var newText  = document.createTextNode(document.getElementById("user_input").value);
+newCell.appendChild(newText);
+    document.getElementById("user_input").value='';
+    }
+  </script>
     <meta charset="utf-8">
     <title></title>
   </head>
-  <body>
+  <body >
+
     <div class="sidenav">
       <div class="media-center">
     <img src="download.jpg" class="media-object" style="width:60px">
@@ -60,7 +78,32 @@
   </div>
 </nav>
 
+<p><span id='display'></span></p>
+<div class="container">
+  <!-- <form >
+<input type="text" class="form-control" placeholder="message" id="user_input"></textarea>
+<div class="btn-send">
+<input type="submit" onclick="showInput();">send<br/>
+</div>
+</div>
+</form> -->
+<form>
 
+    <input type="text" class="form-control" name="message" id="user_input" placeholder="message">
+  </form>
+ <div class="btn-send">
+  <!-- <input type="submit" onclick="showInput();"><br/> -->
+  <button type="submit" class="btn btn-success" onclick="showInput();">send</button><br/>
+</div>
+<div class="table table-dark">
+  <table id="myTable">
+      <tbody>
+        <tr class="data">
+        </tr>
+
+      </tbody>
+
+  </table>
 </div>
 
   </body>
